@@ -1,0 +1,3 @@
+char			wchar_t
+195 : ├ : a exclure
+169 : ® : é : 130

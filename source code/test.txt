@@ -1,0 +1,49 @@
+hello world
+
+int file, taille;
+
+file = open("path", O_RDWR);
+taille = Iseek(file, 0, SEEK_END);
+Iseek(file, 0, SEEK_SET);
+printf("file size : %d", taille);
+
+====================================
+FILE * file = fopen('f', 'r');
+taille = fseek(file, 0, SEEK_END);
+taille = ftell(file);
+
+======================
+
+#include <sys/stat.h>
+
+long fileSize(const char *fileName)
+{
+	struct stat s;
+	if (stat(fileName, &s) !=0)
+	{
+		puts("erroe");
+		return 0;
+	}
+	return s.st_size;
+}
+
+
+=================================
+/*
+	int mode, mode1;
+	wchar_t *fileName;
+	wchar_t word[50];
+	
+	
+	fileName = raw_input(L"fileName : ");
+	mode = input(L"Your choice here : ");
+	fileName = raw_input(L"fileName again : ");
+	wprintf(L"fileName : %ls", fileName);
+	mode = input(L"Your choice here : ");
+
+	//mode1 = input(L"testin g: ");
+	//puts("word : ");
+	//fgetws(word, 50, stdin);
+	//fileName = raw_input(L"msg : ");
+	*/
+=========================================
